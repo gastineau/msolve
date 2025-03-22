@@ -23,6 +23,7 @@
 #include "linear.c"
 #include "lifting.c"
 #include "lifting-gb.c"
+#include "posixfunctions.c"
 
 #ifndef MAX
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))

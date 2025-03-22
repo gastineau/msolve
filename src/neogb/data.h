@@ -30,6 +30,11 @@
 #include <string.h> /* for memset et al. */
 #include <limits.h>
 #include <math.h>
+#if defined(__MINGW64__)
+int posix_memalign(void** memptr, size_t alignment, size_t size);
+ssize_t getdelim(char** linep, size_t* linecapp, int delimiter, FILE* stream);
+ssize_t getline(char** linep, size_t* linecapp, FILE* stream);
+#endif
 
 /* check if OpenMP is available */
 #ifdef _OPENMP
